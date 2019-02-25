@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+
+    <h1>My Movies Page</h1>
+    <h2>
+    {% block subtitle %}
+
+    {% endblock %}
+    </h2>
+</head>
+<body>
+{% block content %}
+<table>
+    {% for eachitem in movie %}
+    <tr>
+        <td>
+            {% eachitem.post.movie_tittle %}
+        </td>
+        <td>
+            <a href="{% url 'movie_details' %}">Movie details</a>
+        </td>
+        <td>
+            <a href="{% url 'mvoie_synopsis' %}">Movie Synopsis</a>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            {% eachitem.post.movie_tittle %}
+        </td>
+        <td>
+            <a href="{% url 'movie_details' %}">Movie details</a>
+        </td>
+        <td>
+            <a href="{% url 'mvoie_synopsis' %}">Movie Synopsis</a>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            {% eachitem.post.movie_tittle %}
+        </td>
+        <td>
+            <a href="{% url 'movie_details' %}">Movie details</a>
+        </td>
+        <td>
+            <a href="{% url 'mvoie_synopsis' %}">Movie Synopsis</a>
+        </td>
+
+    </tr>
+
+{% endblock %}
+</table>
+</body>
+</html>
